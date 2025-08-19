@@ -1,0 +1,162 @@
+{
+  "success": true,
+  "data": {
+    "id": 2,
+    "documentId": "cehs2lhab5py2pgvnmsky85o",
+    "title": "Landing Page",
+    "description": "This is the main website page.",
+    "createdAt": "2025-03-23T04:02:01.879Z",
+    "updatedAt": "2025-08-03T01:07:23.472Z",
+    "publishedAt": "2025-08-03T01:07:23.487Z",
+    "blocks": [
+      {
+        "__component": "blocks.hero",
+        "id": 2,
+        "heading": "Build & Launch without problems",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.",
+        "links": [
+          {
+            "id": 21,
+            "href": "https://strapi.io",
+            "label": "Get Started",
+            "isExternal": true,
+            "isButtonLink": true,
+            "type": "PRIMARY"
+          },
+          {
+            "id": 22,
+            "href": "https://docs.strapi.io",
+            "label": "How It Works",
+            "isExternal": true,
+            "isButtonLink": true,
+            "type": "SECONDARY"
+          }
+        ],
+        "image": {
+          "id": 6,
+          "documentId": "pxuhf5ukwzafkmb8ue8biagy",
+          "alternativeText": null,
+          "url": "/uploads/tables_921e2e7dac.avif"
+        }
+      },
+      {
+        "__component": "blocks.section-heading",
+        "id": 2,
+        "subHeading": "Dolor sit amet consectutar",
+        "heading": "Build & Launch without problems",
+        "anchorLink": "section-1"
+      },
+      {
+        "__component": "blocks.card-grid",
+        "id": 2,
+        "cards": [
+          {
+            "id": 7,
+            "heading": "Lorem ipsum dolor sit amet consectutar",
+            "text": "Fusce quam tellus, placerat eu metus ut, viverra aliquet purus. Suspendisse potenti. Nulla non nibh feugiat."
+          },
+          {
+            "id": 8,
+            "heading": "Ut congue nec leo eget aliquam",
+            "text": "Ut tempus tellus ac nisi vestibulum tempus. Nunc tincidunt lectus libero, ac ultricies augue elementum at."
+          },
+          {
+            "id": 9,
+            "heading": "Proin fringilla eleifend justo pellentesque",
+            "text": "Donec ut ligula nunc. Mauris blandit vel est et facilisis. Integer sapien felis, aliquet at posuere et, porttitor quis ligula."
+          },
+          {
+            "id": 10,
+            "heading": "Morbi sagittis ligula sit amet elit maximus",
+            "text": "Duis ut facilisis orci. Morbi lacinia nunc a augue eleifend, sed placerat ex faucibus. Duis ante arcu, pretium ac luctus vulputate."
+          }
+        ]
+      },
+      {
+        "__component": "blocks.content-with-image",
+        "id": 3,
+        "reversed": false,
+        "heading": "Morbi scelerisque nulla et lectus dignissim eleifend nulla eu nulla a metus",
+        "content": "Quisque id sagittis turpis. Nulla sollicitudin rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est tortor, fermentum at urna a, accumsan suscipit sem.\n\n",
+        "link": null,
+        "image": {
+          "id": 7,
+          "documentId": "m6k376b2oa58vg2dnu5lsv0i",
+          "alternativeText": null,
+          "url": "/uploads/forest_562bafce29.avif"
+        }
+      },
+      {
+        "__component": "blocks.content-with-image",
+        "id": 4,
+        "reversed": true,
+        "heading": "Morbi scelerisque nulla et lectus dignissim eleifend nulla eu nulla a metus",
+        "content": "Quisque id sagittis turpis. Nulla sollicitudin rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est tortor, fermentum at urna a, accumsan suscipit sem.",
+        "link": {
+          "id": 20,
+          "href": "https://strapi.io",
+          "label": "Try Strapi",
+          "isExternal": true,
+          "isButtonLink": true,
+          "type": "PRIMARY"
+        },
+        "image": {
+          "id": 7,
+          "documentId": "m6k376b2oa58vg2dnu5lsv0i",
+          "alternativeText": null,
+          "url": "/uploads/forest_562bafce29.avif"
+        }
+      },
+      {
+        "__component": "blocks.markdown",
+        "id": 2,
+        "content": "## Introduction\nFreelancing as a developer is an exciting path that offers independence and financial growth. However, getting started can feel overwhelming without proper guidance. By focusing on key areas like skill development, networking, and client acquisition, you can establish a successful freelancing career.\n\n## Building a Strong Portfolio\nYour portfolio is your strongest asset as a freelancer. Instead of listing skills, showcase projects that demonstrate your capabilities. Consider building personal projects, contributing to open source, or offering pro bono work to gain experience. A well-presented portfolio builds trust with potential clients."
+      },
+      {
+        "__component": "blocks.person-card",
+        "id": 2,
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit amet erat finibus, ac condimentum ligula ornare.",
+        "personName": "Alice Bradley",
+        "personJob": "Backend Developer",
+        "image": {
+          "id": 8,
+          "documentId": "uka7pcf3dw7yczakvaj6dv3o",
+          "alternativeText": null,
+          "url": "/uploads/image_of_women_fa698d5653.avif"
+        }
+      },
+      {
+        "__component": "blocks.faqs",
+        "id": 2,
+        "faq": [
+          {
+            "id": 11,
+            "heading": "How many cats does Paul have?",
+            "text": "He has two cats."
+          },
+          {
+            "id": 12,
+            "heading": "What are their names?",
+            "text": "Olive and Gracie."
+          }
+        ]
+      },
+      {
+        "__component": "blocks.featured-articles",
+        "id": 2,
+        "articles": []
+      },
+      {
+        "__component": "blocks.newsletter",
+        "id": 2,
+        "heading": "Stay updated with our team",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n\n",
+        "placeholder": "example@email.com",
+        "label": "Submit",
+        "formId": null
+      }
+    ]
+  },
+  "meta": {},
+  "status": 200
+}
