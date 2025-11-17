@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getStrapiMedia } from "../../lib/utils"
+import { getStrapiMedia, cn } from "../../lib/utils"
 
 interface StrapiImageProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src' | 'alt' | 'className' | 'loading'> {
   src: string;
@@ -35,7 +35,14 @@ export function StrapiImage({
 
   const imageUrl = getStrapiMedia(src);
   const aspectClass = getAspectRatioClass(aspectRatio);
-  const imageClasses = `object-cover ${aspectClass} ${className}`;
+  const imageClasses = cn(
+    "w-full h-full object-cover shadow-shadow border-2 border-border bg-background text-foreground font-base",
+    aspectClass,
+    className
+  );
+
+
+   
 
   if (hasError) {
     return (

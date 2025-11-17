@@ -1,6 +1,9 @@
 import type { IArticleDetail } from "../custom/ArticleDetail";
 import { Link } from "react-router";
 
+import { Card } from "~/components/ui/card";
+import { Button } from "~/components/ui/button";
+
 export interface IFeaturedArticles {
   __component: "blocks.featured-articles";
   id: number;
@@ -32,15 +35,15 @@ export function FeaturedArticles(props: IFeaturedArticles) {
         <h2 className={styles.heading}>Featured Articles</h2>
         <div className={styles.grid}>
           {articles.map((article, index) => (
-            <div key={article.documentId || index} className={styles.card}>
-              <Link to={`/articles/${article.slug}`} className={styles.link}>
-                <div className={styles.content}>
-                  <h3 className={styles.title}>{article.title}</h3>
-                  <p className={styles.description}>{article.description}</p>
-                  Read more →
-                </div>
-              </Link>
-            </div>
+            <Card key={article.documentId || index} className={styles.card}>
+              <div className={styles.content}>
+                <h3 className={styles.title}>{article.title}</h3>
+                <p className={styles.description}>{article.description}</p>
+                <Button asChild>
+                  <Link to={`/articles/${article.slug}`}>Read more → </Link>
+                </Button>
+              </div>
+            </Card>
           ))}
         </div>
       </div>
