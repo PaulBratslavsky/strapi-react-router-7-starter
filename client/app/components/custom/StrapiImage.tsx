@@ -64,7 +64,7 @@ export function StrapiImage({
         onError={() => setHasError(true)}
         {...rest}
       />
-      <div className="absolute inset-0 bg-main/20 mix-blend-multiply"></div>
+      <div className="absolute inset-0 bg-main/50 mix-blend-multiply"></div>
     </div>
   );
 }
