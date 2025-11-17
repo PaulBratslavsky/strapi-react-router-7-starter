@@ -11,7 +11,7 @@ export interface IFeaturedArticles {
 }
 
 const styles = {
-  section: "py-16 bg-gray-50",
+  section: "py-16 bg-background",
   sectionEmpty: "py-16",
   container: "container mx-auto px-4",
   containerEmpty: "container mx-auto px-4 text-center",

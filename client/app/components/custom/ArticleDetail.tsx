@@ -2,7 +2,9 @@ import type { TAuthor, TImage } from "../../types";
 import { Link } from "react-router";
 import { MarkdownContent } from "./Markdown";
 import { StrapiImage } from "./StrapiImage";
-import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "~/components/ui/avatar";
+import { Card } from "~/components/ui/card";
+
 import { getStrapiMedia } from "~/lib/utils";
 
 export interface IArticleDetail {
@@ -28,7 +30,7 @@ import {
 } from "../ui/breadcrumb";
 
 const styles = {
-  root: "min-h-screen bg-background",
+  root: "min-h-screen",
   headerWrapper: "bg-card",
   headerContainer: "container mx-auto px-4 py-8",
   headerInner: "max-w-4xl mx-auto",
@@ -40,7 +42,7 @@ const styles = {
 
   bodyContainer: "container mx-auto px-4 py-4",
   bodyInner: "max-w-4xl mx-auto",
-  contentCard: "bg-white rounded-lg shadow-sm p-8 lg:p-12",
+  contentCard: "rounded-lg p-8 lg:p-12",
 
   authorWrapper: "mt-6 flex items-start space-x-6",
   authorImageWrapper: "w-16 h-16 flex-shrink-0",
@@ -99,7 +101,7 @@ export function ArticleDetail(props: IArticleDetail) {
 
       <div className={styles.bodyContainer}>
         <div className={styles.bodyInner}>
-          <div className={styles.contentCard}>
+          <Card className={styles.contentCard}>
             <MarkdownContent content={content} />
 
             {author?.fullName && (
@@ -125,7 +127,7 @@ export function ArticleDetail(props: IArticleDetail) {
                 </div>
               </div>
             )}
-          </div>
+          </Card>
         </div>
       </div>
     </div>

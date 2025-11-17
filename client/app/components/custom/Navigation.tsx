@@ -2,29 +2,32 @@ import { Link } from "react-router";
 
 export function Navigation() {
   return (
-    <nav className="bg-background shadow-sm border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-xl font-bold text-foreground hover:text-primary transition-colors">
-            Your Site
-          </Link>
-          
-          <div className="flex items-center space-x-8">
+    <div className="bg-white p-6 flex justify-center items-center">
+      <nav className="w-full max-w-7xl bg-background shadow-shadow border-2 border-border rounded-lg px-4">
+          <div className="flex items-center justify-between h-16">
             <Link
               to="/"
-              className="text-muted-foreground hover:text-primary transition-colors font-medium"
+              className="text-xl font-base text-foreground hover:text-main transition-colors"
             >
-              Home
+              Your Site
             </Link>
-            <Link
-              to="/articles"
-              className="text-muted-foreground hover:text-primary transition-colors font-medium"
-            >
-              Articles
-            </Link>
+
+            <div className="flex items-center space-x-8">
+              <Link
+                to="/"
+                className="text-foreground hover:text-main transition-colors font-base hover:translate-x-boxShadowX hover:translate-y-boxShadowY"
+              >
+                Home
+              </Link>
+              <Link
+                to="/articles"
+                className="text-foreground hover:text-main transition-colors font-base hover:translate-x-boxShadowX hover:translate-y-boxShadowY"
+              >
+                Articles
+              </Link>
+            </div>
           </div>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }

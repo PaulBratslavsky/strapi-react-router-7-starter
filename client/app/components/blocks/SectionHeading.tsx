@@ -21,7 +21,7 @@ export function SectionHeading(props: ISectionHeading) {
   return (
     <section id={anchorLink} className={styles.section}>
       <div className={styles.container}>
-        <Badge variant="secondary" className={styles.badge}>
+        <Badge variant="default" className={styles.badge}>
           {subHeading}
         </Badge>
         <h2 className={styles.heading}>

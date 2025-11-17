@@ -14,7 +14,7 @@ export interface IHero {
 
 const styles = {
   section:
-    "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-20",
+    "bg-white text-primary-foreground py-20",
   container: "container mx-auto px-4",
   grid: "grid grid-cols-1 lg:grid-cols-2 gap-12 items-center",
   heading: "text-4xl lg:text-6xl font-bold mb-6",

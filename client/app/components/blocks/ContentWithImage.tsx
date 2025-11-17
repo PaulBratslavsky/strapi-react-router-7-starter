@@ -16,7 +16,7 @@ export interface IContentWithImage {
 }
 
 const styles = {
-  section: "py-16",
+  section: "py-16 bg-white",
   container: "container mx-auto px-4",
   wrapper: "grid grid-cols-1 items-center gap-12 lg:grid-cols-2",
   reversed: "lg:[&>*:first-child]:order-2",
@@ -29,7 +29,7 @@ const styles = {
 export function ContentWithImage(props: IContentWithImage) {
   const { reversed, heading, content, link, image } = props;
   const isExternal = Boolean(link?.isExternal);
-  const buttonVariant = link?.type === "PRIMARY" ? "default" : "outline";
+  const buttonVariant = link?.type === "PRIMARY" ? "default" : "neutral";
   const alt = image?.alternativeText || heading || "Content image";
 
   return (

@@ -25,7 +25,7 @@ export function meta({}: Route.MetaArgs) {
 }
 
 const styles = {
-  root: "min-h-screen bg-gray-50",
+  root: "min-h-screen",
   container: "container mx-auto px-4 py-16",
   header: "text-center mb-12",
   title: "text-4xl font-bold text-gray-900 mb-4",
