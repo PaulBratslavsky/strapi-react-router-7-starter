@@ -35,11 +35,13 @@ export function StrapiImage({
 
   const imageUrl = getStrapiMedia(src);
   const aspectClass = getAspectRatioClass(aspectRatio);
-  const imageClasses = cn(
-    "w-full h-full object-cover shadow-shadow border-2 border-border bg-background text-foreground font-base",
+  const containerClasses = cn(
+    "relative overflow-hidden shadow-shadow border-2 border-border bg-background",
     aspectClass,
     className
   );
+  
+  const imageClasses = "w-full h-full object-cover";
 
 
    
@@ -53,13 +55,16 @@ export function StrapiImage({
   }
 
   return (
-    <img
-      src={imageUrl}
-      alt={alt || ""}
-      loading={loading}
-      className={imageClasses}
-      onError={() => setHasError(true)}
-      {...rest}
-    />
+    <div className={containerClasses}>
+      <img
+        src={imageUrl}
+        alt={alt || ""}
+        loading={loading}
+        className={imageClasses}
+        onError={() => setHasError(true)}
+        {...rest}
+      />
+      <div className="absolute inset-0 bg-main/20 mix-blend-multiply"></div>
+    </div>
   );
 }

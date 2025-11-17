@@ -1,7 +1,9 @@
-import type { TAuthor, TImage } from "../../types"
+import type { TAuthor, TImage } from "../../types";
 import { Link } from "react-router";
 import { MarkdownContent } from "./Markdown";
 import { StrapiImage } from "./StrapiImage";
+import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
+import { getStrapiMedia } from "~/lib/utils";
 
 export interface IArticleDetail {
   documentId: string;
@@ -84,9 +86,7 @@ export function ArticleDetail(props: IArticleDetail) {
                 <StrapiImage
                   src={featuredImage.url}
                   alt={
-                    featuredImage.alternativeText ||
-                    title ||
-                    "Article image"
+                    featuredImage.alternativeText || title || "Article image"
                   }
                   aspectRatio="16:9"
                   className={styles.featuredImage}
@@ -104,18 +104,19 @@ export function ArticleDetail(props: IArticleDetail) {
 
             {author?.fullName && (
               <div className={styles.authorWrapper}>
-                {author.image?.url && (
-                  <div className={styles.authorImageWrapper}>
-                    <StrapiImage
-                      src={author.image.url}
-                      alt={author.image.alternativeText || author.fullName}
-                      aspectRatio="square"
-                      className={styles.authorImage}
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                )}
+                <Avatar className="w-16 h-16">
+                  <AvatarImage
+                    src={author.image?.url ? getStrapiMedia(author.image.url) : undefined}
+                    alt={author.image?.alternativeText || author.fullName}
+                  />
+                  <AvatarFallback>
+                    {author.fullName
+                      ?.split(" ")
+                      .map((name) => name[0])
+                      .join("")
+                      .slice(0, 2)}
+                  </AvatarFallback>
+                </Avatar>
                 <div>
                   <h3 className={styles.authorName}>About {author.fullName}</h3>
                   {author.bio && (
